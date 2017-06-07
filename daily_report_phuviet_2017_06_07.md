@@ -6,7 +6,7 @@
 **Concepts of Git**
 - **Repository** - the place where contain your source code.Have 2 types of repository:
 -- **Local repository** - contain your source code in your PC or your laptop. You can create local repository in your laptop or PC by syntax:
-*##create folder and setup local repository*
+*##create folder to setup local repository*
 `mkdir folder_name`
 *##move to this folder and setup local repository*
 `cd folder_name`
