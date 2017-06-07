@@ -32,5 +32,6 @@ Click button `New repository` and fill in **Repository name** to  create new **r
 *##combine file code from another branch to current branch*
 `git rebase <another_branch>`
 - **git reset** - return the past commit you want and delete or not commit behind dependent on syntax you use:
--- **git reset --hard** - return the past commit you want and delete commit behind.
--- **git reset --soft** - return the past commit you want and keep stable commit behind.
+-- **git reset --hard <commit_name>** - return the past commit you want and delete commit behind.
+-- **git reset --soft <commit_name>** - return the past commit you want and keep stable commit behind.
+
