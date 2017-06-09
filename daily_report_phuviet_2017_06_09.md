@@ -2,10 +2,10 @@
 
 > Ruby basic knowledge include **Basic syntax**, **Control flow** and  **Rules to create name for variables and class**.
 
-#### **Rules to create name for variables and class**:
+### **Rules to create name for variables and class**:
 - **Variables** - follow "snake_case" rule to create name for variables in ruby's language that mean name's variables was created with characters "_" between them.
 - **Class** - follow "camelCase" or "CamelCase" rule to create name for class in ruby's language that mean name's class was created  by uppercase the first characters of each word on class's name.
-#### **Basic syntax**:
+### **Basic syntax**:
 - **puts** - print string text or variables or everything can in one line and this line is block with another print command.
 
 Example for puts syntax:
@@ -83,7 +83,7 @@ Result of example in console:
 10-11-12
 ```
 
-####**Control flow**
+### **Control flow**
 - **if(condition){block code}end** - if condition is true then execute the code in block code else do nothing.
 
 Example for if syntax:
