@@ -1,7 +1,7 @@
-##HTML basic knowledge.
+## HTML basic knowledge.
 > **HTML(Hypertext Markup Language)** is the standard markup language for creating web pages and web applications.
 
-###Structure of standard html page.
+### Structure of standard html page.
 - Create html page with declare **< !DOCTYPE html >** in top of file is say to system which we use **HTML 5** to design this page. 
 - There are 3 tags which always be used first when create the html page such as **< html >** , **< head >**, **< body >**.
 	- **< html >** - the begin tag of html page contain **< head >** tag and **< body >** tag. This tag is required to start design the html page.
@@ -56,7 +56,7 @@ Example for 3 parts of html pages:
 
 </html>
 ```
-###Types of tags in HTML(Hypertext Markup Language).
+### Types of tags in HTML(Hypertext Markup Language).
 > There are 3 types of tags in HTML such as **inline tag**, **block tag**, **empty tag**.
 
 - **inline tag** - an inline element does not start on a new line and only takes up as much width as necessary. Such as: **< span >**, **< a >**, **< img >**,...
@@ -70,7 +70,7 @@ Example for 3 parts of html pages:
 - **empty tag** - is the tag without the close tag. Such as: **< br >**, **< hr >**,...
 	- **< br >** - used when writer want to start a new line.
 	- **< hr >** - used when writer want to create a line page in a new line.
-###Other commonly used html tags.
+### Other commonly used html tags.
 - **< iframe >** - insert video from others resource into html page.
 - **< video >** - insert video with .mp4 format available from you PC or Laptop into html page.
 - **< audio >** - insert audio from others resource into html page.
