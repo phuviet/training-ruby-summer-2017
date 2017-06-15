@@ -33,7 +33,7 @@ def centuryFromYear(year)
 end
 puts centuryFromYear(1701)
 
-#bai 5 Fibonacci
+bai 5 Fibonacci
 def fibonacci(n)
 	return n if (n == 1 || n == 0)
 	fibonacci(n-2) + fibonacci(n-1)
@@ -43,17 +43,17 @@ puts fibonacci(4)
 #bai 6 Check Prime Number
 def prime_number?(number)
 	check = true
-	for i in 2..number-1
+	for i in 2..number/2
 		check = false if number % i == 0
 	end
 	check
 end
-puts prime_number?(7)
+puts prime_number?(22)
 
 #bai 7 Check Perfect Number
 def perfect_number?(number)
 	sum = 0
-	for i in 1..number-1
+	for i in 1..number/2
 		sum += i if number % i == 0
 	end
 	return true if sum == number
