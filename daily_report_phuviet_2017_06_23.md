@@ -285,4 +285,5 @@ Rabbit.jump
 ```
 Result
 ```
-I ju
+I juI jump qwoie 2 feet!
+```
