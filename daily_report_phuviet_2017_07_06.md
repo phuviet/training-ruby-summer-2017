@@ -1,4 +1,4 @@
-	
+
 ## Java Script knowledge day 2
 > Java Script knowledge day 2 include: **Function**, **DOM**, **Events**.
 ### Function in Java Script
@@ -17,7 +17,7 @@ console.log(sum(3,4)); //=>result: 7
 - **Expression function** - the function which be declared by use one variables to contain function and we can call this function by call this variable but only below function declared. **Expression function** suitable for the small function with a few line of code.
 
 Example:
-````
+```
 console.log(sum(2,4)); //=>result: error - function sum not be defined
 var sum = function(x,y){
 	return x + y;
@@ -175,3 +175,5 @@ y.appendChild(x)
 - **ondbclick** - happen when double click to element.
 - **onchange** - happen when value of HTML tag be changed, usually be used for tag input in form.
 - **onmouseover** - happen when cursor start enter this HTML tag.
+
+
