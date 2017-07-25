@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body {
+			text-align: center;
+		}
+		table {
+			margin: 0 auto;
+		}
+		h1 {
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<p><%= notice%></p>
+	<%if current_user != nil
+	%>
+		<h1>Hello <%=current_user.email%></h1>
+	<%
+		else
+	%>
+		<h1>Orther</h1>
+	<%end%>
+	<%= link_to 'Logout', logout_path, method: :delete%>
+	<h2>User List</h2>
+	<table>
+		<tr>
+			<th>Username</th>
+			<th>Email</th>
+			<th>Name</th>
+			<th>Gender</th>
+			<th>Birthday</th>
+			<th>Role</th>
+		</tr>
+		<%@users.each do |user|%>
+		<tr>
+			<td><%=user.username%></td>
+			<td><%=user.email%></td>
+			<td><%=user.name%></td>
+			<td><%=user.gender%></td>
+			<td><%=user.birthday%></td>
+			<td><%=user.role%></td>
+		</tr>
+		<%end%>
+	</table>
+	<%= link_to 'Previous', users_path(page: params[:page].to_i-1 < 1 ? 1 : params[:page].to_i-1) %>
+	<% for i in 1..@page_number%>
+		<%= link_to "Page #{i}", users_path(page: i)%>
+	<%end%>
+	<%= link_to 'Next', users_path(page: params[:page].to_i+1 > @page_number ? @page_number : params[:page].to_i+1) %>
+</body>
+</html>

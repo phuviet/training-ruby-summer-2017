@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		form, div {
+			display: inline-block;
+		}
+		div {
+			text-align: left;
+		}
+		.top {
+			display: block;
+			margin-left: 40%;
+		}
+		body {
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>Sign up</h1>
+		<div class="top">
+	  	<%if @user.errors.any? %>
+				<div id="error_explanation">
+					<h2>
+						<%=	pluralize(@user.errors.count,	"error") %>	prohibited
+						this	article	from	being	saved:
+					</h2>
+					<ul>
+						<% @user.errors.full_messages.each do |msg| %>
+						<li><%=	msg	%></li>
+						<%end%>
+					</ul>
+				</div>
+			<%	end	%>
+		</div>
+		<div>
+	    <%= form_for @user, url: users_path do |f| %>
+
+	      <%= f.label :name, 'Name:'%><br/>
+	      <%= f.text_field :name %><br/>
+
+	      <%= f.label :email, 'Email:'%><br/>
+	      <%= f.email_field :email %><br/>
+
+	      <%= f.label :password, 'Password:'%><br/>
+	      <%= f.password_field :password %><br/>
+
+	      <%= f.label :password_confirmation, "Confirmation password:" %><br/>
+	      <%= f.password_field :password_confirmation %><br/>
+
+	      <%= f.label :avatar, 'Avatar:'%><br/>
+	      <%= f.file_field :avatar %><br/>
+
+	      <%= f.submit "Create my account", class: "btn btn-primary" %>
+	    <% end %>
+		</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		form, div {
+			display: inline-block;
+		}
+		div {
+			text-align: left;
+		}
+		body {
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>Login</h1>
+	<div>
+		<%= form_for :session, url: login_path do |f| %>
+
+			<%= f.label :email, 'Email:'%><br/>
+			<%= f.text_field :email %><br/>
+
+			<%= f.label :password, 'Password:' %><br/>
+			<%= f.password_field :password %><br/>
+
+			<%= f.label :remember_me, class: "checkbox inline" do %>
+        <%= f.check_box :remember_me %>
+        <span>Remember me on this computer</span>
+      <% end %><br/>
+
+			<%= f.submit 'Submit'%>
+
+		<%end%>
+	</div>
+</body>
+</html>
