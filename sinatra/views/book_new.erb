@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body style="text-align: center;">
+	<h1>Add new lended book</h1>
+	<form action="/books/new" method="post">
+		<table style="margin: 0 auto">
+			<tr>
+				<th><label>Name's book</label></th>
+				<th><input type="text" name="name_book"></th>
+			</tr>
+			<tr>
+				<th><label>Author</label></th>
+				<th><input type="text" name="author"></th>
+			</tr>
+			<tr>
+				<th><label>Publish date</label></th>
+				<th><input type="text" name="publish_date"></th>
+			</tr>
+			<tr>
+				<th><label>Lend people</label></th>
+				<th>
+					<select name="lend_people">
+					<% @users.each do |user|%>
+						<option value="<%=user['id_user'] %>"><%=user['fullname'] %></option>
+					<%end %>
+					</select>
+				</th>
+				<tr>
+					<th colspan=2>
+						<button type="submit">Submit</button>
+					</th>
+				</tr>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
