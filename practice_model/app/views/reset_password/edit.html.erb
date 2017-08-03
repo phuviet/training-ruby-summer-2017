@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    form, div {
+      display: inline-block;
+    }
+    div {
+      text-align: left;
+    }
+    .top {
+      display: block;
+      margin-left: 40%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Reset password</h1>
+  <%= form_for @user, url: reset_password_path(@user), method: :put do |f| %>
+
+    <%= f.label :password, 'Password:'%><br/>
+    <%= f.password_field :password %><br/>
+
+    <%= f.label :password_confirmation, "Confirmation password:" %><br/>
+    <%= f.password_field :password_confirmation %><br/>
+
+    <%= f.submit "Reset my password", class: "btn btn-primary" %>
+  <% end %>
+</body>
+</html>

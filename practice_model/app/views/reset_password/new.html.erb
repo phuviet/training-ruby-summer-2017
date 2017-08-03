@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <%=form_for @user, url: reset_password_index_path do |f|%>
+    <%= f.label :email, 'Please enter your email to reset'%><br/>
+    <%= f.text_field :email%>
+
+    <%= f.submit 'Submit'%>
+  <%end%>
+</body>
+</html>

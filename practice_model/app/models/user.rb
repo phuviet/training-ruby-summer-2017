@@ -38,9 +38,9 @@ class User < ApplicationRecord
   validate :avatar_size
   validates :uid, uniqueness: { scope: :provider }, on: :update
 
-  enum gender: ['male', 'female']
+  enum gender: %w[Male Female]
   # or enum gender: %w(male female gay les other)
-  enum role: %w[member mod admin]
+  enum role: %w[Member Mod Admin]
 
   def birthday_validate
     errors.add(:birthday, 'must be over 16 years old') if birthday.present? && (Time.now - 16.years < birthday)

@@ -4,6 +4,6 @@
 	<title></title>
 </head>
 <body>
-	<h1>You confirm by link <%=link_to "#{@user.confirm_token}", confirm_users_url(email: @user.email, confirm_token: @user.confirm_token), targer: '_blank' %></h1>
+	<h1>You confirm by link <%=link_to "#{@user.confirm_token}", new_confirm_url(email: @user.email, confirm_token: @user.confirm_token), targer: '_blank' %></h1>
 </body>
 </html>

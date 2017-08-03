@@ -9,12 +9,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def confirm
-    @user = User.find_by(email: params[:email], confirm_token: params[:confirm_token])
-    @user.update_attribute(:confirm_at, Time.now) if DateTime.now - 5.seconds < @user.confirm_send_at
-    redirect_to login_path
-  end
-
   def new
     @user = User.new
   end
@@ -28,6 +22,8 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
+
+  private
 
   def user_params_new
     params.require(:user).permit(:name, :email, :password, :password_confirmation, :avatar)
